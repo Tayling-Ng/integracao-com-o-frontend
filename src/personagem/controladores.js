@@ -67,7 +67,7 @@ async function deleteById(req, res) {
     // Remover o item do DB usando id via service
     await service.deleteById(id)
     
-    res.send('Item removido com sucesso: ' + id)
+    res.status(204).send()
 }
 
 module.exports = {
