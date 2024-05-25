@@ -1,9 +1,9 @@
 require('dotenv').config()
+require('express-async-errors') // O import da Async Errors tem que ficar antes das rotas
 const express = require('express')
 const { connectToDatabase } = require('./db/conexao')
 const personagemRouter = require('./personagem/rotas')
 const cors = require('cors')
-require('express-async-errors')
 
 // Declarar a função de conxeção com o Banco de dados
 async function main() {
