@@ -2,6 +2,7 @@ require('dotenv').config()
 const express = require('express')
 const { connectToDatabase } = require('./db/conexao')
 const personagemRouter = require('./personagem/rotas')
+const cors = require('cors')
 
 // Declarar a função de conxeção com o Banco de dados
 async function main() {
