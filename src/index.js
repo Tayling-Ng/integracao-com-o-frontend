@@ -3,6 +3,7 @@ const express = require('express')
 const { connectToDatabase } = require('./db/conexao')
 const personagemRouter = require('./personagem/rotas')
 const cors = require('cors')
+require('express-async-errors')
 
 // Declarar a função de conxeção com o Banco de dados
 async function main() {
