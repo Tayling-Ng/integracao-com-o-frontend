@@ -30,6 +30,12 @@ async function main() {
         res.status(500).send({ error: 'Algo deu errado!' });
     });
 
+    // catch-all: Tratamento de rotas não encontradas
+    // Tem que ficar no final do código, depois de todos os endpoints e antes do listen
+    app.use('*', (req, res) => {
+        res.status(404).send({ error: 'Endpoint não encontrado'})
+    })
+
     app.listen(3000, function() {
         console.log("Servidor rodando em http://localhost:3000")
     })
