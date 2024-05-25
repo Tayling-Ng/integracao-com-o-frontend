@@ -3,7 +3,7 @@ const { MongoClient } = require('mongodb')
 // Informações do Banco de Dados
 const dbUrl = process.env.DATABASE_URL
 // Quando muda o nome do banco automaticamente cria um banco novo no MongoDB
-const dbName = 'projeto-em-arquitetura-mvc'
+const dbName = 'integracao-com-frontend'
 
 const client = new MongoClient(dbUrl)
 
